@@ -1,0 +1,21 @@
+package com.company;
+import java.util.Scanner;
+
+public class Cesar {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите фразу");
+        String b =in.nextLine();
+        System.out.println("Введите сдвиг");
+        Integer a =in.nextInt();
+        char[] c = b.toCharArray();
+               for (int i = 0; i < c.length; i++)
+               { for (int j = 0; j < a; j++)
+               {
+                   c[i]++;
+               }
+            System.out.print(""+ c[i]);
+        }
+    }
+
+}
