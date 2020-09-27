@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class example15
+{
+ public static void main(String[] args) {
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite pervoe chislo: ");
+  int T = inCMD.nextInt();
+ System.out.printf("Vvedite vtoroe chislo: ");
+  int V = inCMD.nextInt();
+V = V + T;
+ System.out.printf("Summa: %d \n", V);
+ inCMD.close();
+ }
+}
