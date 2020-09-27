@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class example17
+{
+ public static void main(String[] args) {
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite pervoe chislo: ");
+  int T = inCMD.nextInt();
+ System.out.printf("Vvedite vtoroe chislo: ");
+  int V = inCMD.nextInt();
+int S,R;
+S = V + T;
+R = T - V;
+ System.out.printf("Summa: %d \n", S);
+System.out.printf("Raznost': %d \n", R);
+ inCMD.close();
+ }
+}
