@@ -1,0 +1,16 @@
+import java.util.Scanner;
+class example19
+{
+public static void main(String[] args) 
+{
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite znachenie kateta a: ");
+  double a = inCMD.nextDouble();
+ System.out.printf("Vvedite znachenie kateta b: ");
+  double b = inCMD.nextDouble();
+  double c = Math.sqrt(Math.exp(a*Math.log(2)) + Math.exp(b*Math.log(2)));
+System.out.println("katet a=" + a);
+System.out.println("katet b=" + b);
+System.out.println("hypotenuse c=" + c);
+}
+}
