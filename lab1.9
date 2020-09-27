@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class example9
+{
+ public static void main(String[] args) {
+ Scanner inCMD = new Scanner(System.in);
+  System.out.print("Vvedite imya: ");
+ String name = inCMD.nextLine();
+ System.out.print("Vvedite vozrast: ");
+ int age = inCMD.nextInt();
+ System.out.printf("Imya: %s; Vozrast: %d \n", name, age);
+ inCMD.close();
+ }
+}
