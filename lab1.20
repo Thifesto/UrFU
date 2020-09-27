@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class example20
+{
+public static void main(String[] args) 
+{
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite chislo a: ");
+  double a = inCMD.nextDouble();
+ System.out.printf("Vvedite chislo b: ");
+  double b = inCMD.nextDouble();
+  double c = Math.pow(a,b);
+System.out.println("a^b=" + c);
+}
+}
