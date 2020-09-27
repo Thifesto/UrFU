@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class example16
+{
+ public static void main(String[] args) {
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite chislo: ");
+  int V = inCMD.nextInt();
+V = V - 1;
+ System.out.printf("%d ", V);
+V = V + 1;
+ System.out.printf("%d ", V);
+V = V + 1;
+ System.out.printf("%d ", V);
+V = ((V - 1) + V + (V - 2))*((V - 1) + V + (V - 2));
+ System.out.printf("%d ", V);
+ inCMD.close();
+ }
+}
