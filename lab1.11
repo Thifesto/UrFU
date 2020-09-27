@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class example11
+{
+ public static void main(String[] args) {
+ Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite nazvanie mesyatsa v pred. padege: ");
+ String mes = inCMD.nextLine();
+System.out.printf("Vvedite kolichestvo dney v %s: ", mes);
+ int num = inCMD.nextInt();
+ System.out.printf("V %s kolichestvo dney: %d \n", mes, num);
+ inCMD.close();
+ }
+}
