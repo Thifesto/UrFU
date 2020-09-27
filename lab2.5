@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class z52 {
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            System.out.println("Введите число");
+
+            int b =in.nextInt();
+            String hexstr = Integer.toString(b);
+            int [] mas = new int[hexstr.length()];
+            for (int i = 0; i < hexstr.length(); i++)
+            {
+                mas[i] = hexstr.charAt(i) - '0';
+            }
+            int x = hexstr.length() - 4;
+            System.out.printf("В разряде тысяч введенного числа стоит цифра = %d", mas[x]);
+        }
+
+    }
