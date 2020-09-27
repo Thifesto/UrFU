@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class example14
+{
+ public static void main(String[] args) {
+int T, V;
+T = 2020; 
+Scanner inCMD = new Scanner(System.in);
+  System.out.printf("Vvedite vash vozrast: ");
+  int god = inCMD.nextInt();
+V = T - god;
+ System.out.printf("God Vashego rogdeniya: %d \n", V);
+ inCMD.close();
+ }
+}
