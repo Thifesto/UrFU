@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class example8
+{
+ public static void main(String[] args) {
+ Scanner inCMD = new Scanner(System.in);
+ System.out.print("Vvedite familiyu: ");
+ String fam = inCMD.nextLine();
+  System.out.print("Vvedite imya: ");
+ String name = inCMD.nextLine();
+  System.out.print("Vvedite otchestvo: ");
+ String otc = inCMD.nextLine();
+ System.out.printf("Hello, %s %s %s \n", fam, name, otc);
+ inCMD.close();
+ }
+}
