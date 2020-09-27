@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class example5
+{
+ public static void main(String[] args) {
+ Scanner inCMD = new Scanner(System.in);
+ System.out.print("Input name: ");
+ String name = inCMD.nextLine();
+ System.out.print("Input age: ");
+ int age = inCMD.nextInt();
+ System.out.print("Input height: ");
+ float height = inCMD.nextFloat();
+ System.out.printf("Name: %s Age: %d Height: %.2f \n", name, age, height);
+ inCMD.close();
+ }
+}
