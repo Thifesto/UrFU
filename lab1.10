@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class example10
+{
+ public static void main(String[] args) {
+ Scanner inCMD = new Scanner(System.in);
+  System.out.print("Vvedite den' nedeli: ");
+ String den = inCMD.nextLine();
+ System.out.print("Vvedite nazvanie mesyatsa v rod. padege: ");
+ String mes = inCMD.nextLine();
+System.out.print("Vvedite nomer dnya v mesyatse: ");
+ int num = inCMD.nextInt();
+ System.out.printf("%s %d %s \n", den, num, mes);
+ inCMD.close();
+ }
+}
