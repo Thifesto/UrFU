@@ -1,0 +1,33 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class l332 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите количество чисел Фибоначчи");
+        int n = 1, m = 1;
+        int a =in.nextInt();
+        int [] mas = new int[a];
+        mas [0] = 1;
+        mas [1] = 1;
+        int i = 0;
+        while (i < a)
+        {
+            if (i<2)
+                {System.out.printf("%d, ", +mas[i]);
+                i++;
+                continue;}
+            if (i == a-1)
+            {mas [i] = mas [i-2] + mas [i-1];
+                System.out.printf("%d", +mas[i]);
+                i++;
+                continue;}
+            mas [i] = mas [i-2] + mas [i-1];
+            System.out.printf("%d, ", +mas[i]);
+            i++;
+        }
+
+    }
+
+}
