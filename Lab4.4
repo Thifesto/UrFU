@@ -1,0 +1,14 @@
+package com.company;
+
+public class l44 {
+    public static void main(String[] args) {
+        char[][] pryam = new char[5][5];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < i+1; j++) {
+                pryam[i][j] = '▇';
+                System.out.print(pryam[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
