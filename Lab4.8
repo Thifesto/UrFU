@@ -1,0 +1,42 @@
+package com.company;
+import java.util.Scanner;
+
+public class Cesar {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Введите фразу");
+        String b = in.nextLine();
+        System.out.println("Введите ключ");
+        Integer a = in.nextInt();
+        char[] c = b.toCharArray();
+        System.out.println("Выберите режим работы программы:\n1 - зашифровать сообщение\n2 - расшифровать сообщение");
+        int n =in.nextInt();
+        switch (n) {
+            case 1: {
+
+                System.out.println("Зашифрованная фраза: ");
+                for (int i = 0; i < c.length; i++) {
+                    for (int j = 0; j < a; j++)
+                        c[i]++;
+                    System.out.print("" + c[i]);
+                }
+                break;
+            }
+            case 2:
+                {
+                System.out.println("Расшифрованная фраза: ");
+                for (int i = 0; i < c.length; i++) {
+                    for (int j = 0; j < a; j++)
+                        c[i]--;
+                    System.out.print("" + c[i]);
+                }
+                break;
+            }
+            default:
+                System.out.println("Выбран неверный режим работы");
+        }
+
+
+    }
+
+}
