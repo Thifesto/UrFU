@@ -1,0 +1,68 @@
+package com.company;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class l46 {
+    public static void main(String[] args) {
+        Scanner id = new Scanner(System.in);
+        System.out.println("Введите число строк массива");
+        int Size = id.nextInt();
+        System.out.println("Введите число столбцов массива");
+        int Size2 = id.nextInt();
+        int[][] pryam = new int[Size][Size2];
+        Random random = new Random();
+        System.out.println("Исходный массив:");
+        for (int i = 0; i < Size; i++) {
+            for (int j = 0; j < Size2; j++) {
+                pryam[i][j] = random.nextInt(9);
+                System.out.print(pryam[i][j]);
+            }
+            System.out.println();
+        }
+        int[][] n1 = new int[Size - 1][Size2 - 1];
+        int str = random.nextInt(Size);
+        int str2 = random.nextInt(Size2);
+        System.out.println("Из массива будет удалена " +(str+1) + " строка и " +(str2+1) + " столбец");
+        System.out.println("Измененный массив:");
+        int k = 0;
+        int l = 0;
+        for (int i = 0; i < n1.length; i++) {
+            if (i != str) {
+                for (int j = 0; j < n1[0].length; j++)
+                    if (j != str2) {
+                        n1[i][j] = pryam[k][l];
+                        l++;
+                        System.out.print(n1[i][j]);
+                    } else
+                    {
+                        l++;
+                        n1 [i][j] = pryam [k][l];
+                        System.out.print(n1[i][j]);
+                        l++;
+                    };
+            k++;
+            l=0;
+            } else
+            {
+                k++;
+                for (int j = 0; j < Size2 - 1; j++)
+                    if (j != str2) {
+                        n1[i][j] = pryam[k][l];
+                        l++;
+                        System.out.print(n1[i][j]);
+                    } else
+                    {
+                        l++;
+                        n1 [i][j] = pryam [k][l];
+                        System.out.print(n1[i][j]);
+                        l++;
+                    }
+
+            k++;
+                    l=0;
+            };
+            System.out.println();
+        }
+    }
+}
