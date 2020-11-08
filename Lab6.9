@@ -1,0 +1,31 @@
+package com.company;
+
+public class t9 {
+    static void osm(char a[]) {
+        char b[] = new char[a.length];
+        for (int j = 0; j < b.length; j++)
+            b[j] = a[j];
+        for (int j = 0; j < b.length/2; j++) {
+            b[j] = a[a.length -1 - j];
+            b[a.length -1 - j] = a[j];
+        }
+        for (int j = 0; j < b.length; j++)
+            System.out.print(b[j]);
+    }
+
+
+
+}
+
+package com.company;
+
+public class main {
+
+    public static void main(String[] args) {
+        t9 p1 = new t9();
+char[] mas = {'a', 'b', 'c', 'd', 'e', 'f'};
+p1.osm (mas);
+
+
+      }
+}
