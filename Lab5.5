@@ -1,0 +1,48 @@
+package com.company;
+
+public class t5 {
+    private int a5;
+
+   public void put() {
+        a5 = 0;
+    }
+    public void put(int i) {
+        if (i<100)
+            a5 = i;
+        else a5 = 100;
+    }
+
+    t5() {
+        a5 = 0;
+    }
+
+    t5 (int i) {
+        if (i<100)
+            a5 = i;
+        else a5 = 100;
+           }
+
+
+    int get() {
+            System.out.println("a5 = " + a5);
+            return 0;
+                    }
+}
+
+public class main {
+
+    public static void main(String[] args) {
+        t5 p1 = new t5();
+        p1.put(15);
+        p1.get();
+
+        t5 p2 = new t5(107);
+        p2.get();
+
+        t5 p3 = new t5(19);
+        p3.get();
+
+        t5 p4 = new t5();
+        p4.get();
+    }
+}
