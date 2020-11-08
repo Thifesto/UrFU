@@ -1,0 +1,35 @@
+package com.company;
+
+public class t4 {
+    int j;
+    public void fact(int i) {
+        int result = 1;
+        for (int j=i; j > 0; j--) {
+            result *= j;
+            j--;
+        }
+        System.out.println("Factorial= " + result);
+    }
+
+
+    int factrec(int i) {
+        int result;
+        if (i == 1) return 1;
+        if (i == 2) return 2;
+        result = factrec(i - 2) * i;
+        return result;
+    }
+}
+
+public class main {
+
+    public static void main(String[] args) {
+t4 p1 = new t4();
+p1.fact(5);
+p1.fact(6);
+int p2 = p1.factrec(5);
+        System.out.println("Factorial= " + p2);
+int p3 = p1.factrec(6);
+        System.out.println("Factorial= " + p3);
+      }
+}
