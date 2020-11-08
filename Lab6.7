@@ -1,0 +1,25 @@
+package com.company;
+
+public class t7 {
+    static int[] osm(char a[]) {
+        int b[] = new int[a.length];
+        for (int j = 0; j < b.length; j++)
+            b[j] = a[j];
+        return b;
+
+    }
+}
+
+public class main {
+
+    public static void main(String[] args) {
+        t7 p1 = new t7();
+char[] mas = {'a', 'b', 'c', 'C', 'B', 'A'};
+System.out.println("Massiv: ");
+int p2[];
+p2= p1.osm (mas);
+for (int i = 0; i<p2.length; i++)
+System.out.print (p2[i]);
+
+      }
+}
