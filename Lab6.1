@@ -1,0 +1,53 @@
+package com.company;
+
+public class t1 {
+    String a1;
+    char b1;
+
+    public void put (char b) {
+        b1 = b;
+    }
+
+    public void put (String a) {
+        a1 = a;
+    }
+
+    public void put (char c []) {
+        if (c.length == 1)
+            b1=c[0];
+        else
+            a1 = new String(c);
+    }
+
+    public void Output () {
+        System.out.println("Stroka= " + a1);
+        System.out.println("Simvol= " + b1);
+    }
+
+}
+
+public class main {
+
+    public static void main(String[] args) {
+t1 p1 = new t1();
+p1.put ('b');
+p1.put ("ohaio");
+p1.Output();
+
+        char mas1 [] = new char [1];
+        mas1[0]= 'c';
+        p1.put(mas1);
+
+        char mas2 [] = new char [6];
+        mas2[0]= 'a';
+        for (int i=1; i<mas2.length; i++) {
+            int j = mas2[i-1];
+            j++;
+            mas2[i] = (char)j;
+
+        }
+        p1.put(mas2);
+        p1.Output();
+
+    }
+}
