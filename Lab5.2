@@ -1,0 +1,30 @@
+package com.company;
+
+public class t2 {
+    private char ch1 = 'A';
+    private char ch2 = 'D';
+
+    public String result() {
+        int i1 = ch1;
+        int i2 = ch2;
+        String s1;
+        char[] mas = new char[i2-i1-1];
+        for (int i = 0; i < mas.length; i++) {
+            ch1++;
+            mas[i] = ch1;
+                    }
+        s1 = new String(mas);
+        return s1;
+
+    }
+}
+
+public class main {
+
+public static void main(String[] args) {
+    t2 p1 = new t2();
+    String s2= p1.result();
+    System.out.println(s2);
+    }
+
+}
