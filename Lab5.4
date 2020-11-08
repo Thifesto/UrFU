@@ -1,0 +1,36 @@
+package com.company;
+
+public class t4 {
+    char a4;
+    int b4;
+
+    t4 (int i, char j) {
+        a4 = j;
+        b4 = i;
+    }
+
+    t4 (double k) {
+        int c4 = (int)k;
+        a4 = (char)c4;
+k = k*100;
+int d4 = (int)k;
+b4 = d4%c4;
+            }
+
+    public void Output () {
+        System.out.println("a4 = " + a4);
+        System.out.println("b4 = " + b4);
+    }
+
+}
+
+public class main {
+
+    public static void main(String[] args) {
+        t4 p1 = new t4(8, 'B');
+        p1.Output();
+
+        t4 p2 = new t4(66.49654);
+        p2.Output();
+    }
+}
