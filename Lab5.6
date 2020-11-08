@@ -1,0 +1,78 @@
+ackage com.company;
+
+public class t6 {
+    private int min;
+    private int max;
+
+    t6() {
+        min=max=0;
+    }
+
+    t6 (int i) {
+        if (max<=i)
+            max=i;
+        if (min>=i)
+            min = i;
+    }
+    t6 (int i, int j) {
+        if (i >= j) {
+            if (max <= i)
+                max = i;
+            if (min >= j)
+                min = j;
+        } else {
+            if (max <= j)
+                max = j;
+            if (min >= i)
+                min = i;
+        }
+    }
+
+        public void put(int i) {
+        if (max<=i)
+            max=i;
+        if (min>=i)
+            min = i;
+    }
+    public void put(int i, int j) {
+        if (i>=j) {
+            if (max<=i)
+                max=i;
+            if (min>=j)
+                min=j;
+        }
+        else {
+            if (max<=j)
+                max=j;
+            if (min>=i)
+                min=i;
+        }
+
+    }
+
+    public void Output () {
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+    }
+}
+
+public class main {
+
+    public static void main(String[] args) {
+
+        t6 p1 = new t6();
+        p1.put(20);
+        p1.Output();
+
+        t6 p2 = new t6();
+        p2.put(10, 15);
+        p2.Output();
+
+        t6 p3 = new t6(107);
+        p3.Output();
+
+        t6 p4 = new t6(19, 9);
+        p4.Output();
+
+    }
+}
