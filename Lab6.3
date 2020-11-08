@@ -1,0 +1,38 @@
+package com.company;
+
+public class t3 {
+    public static void min (int... nums) {
+        int m1 = nums [0];
+        for (int i = 0; i<nums.length; i++)
+            if (m1 > nums[i])
+                m1 = nums[i];
+        System.out.println("Minimum= " + m1);
+                }
+
+    public static void max (int... nums) {
+        int m2 = nums [0];
+        for (int i = 0; i<nums.length; i++)
+            if (m2 < nums[i])
+                m2 = nums[i];
+        System.out.println("Maximum= " + m2);
+    }
+
+    public static void sred (int... nums) {
+        double sum = 0;
+        for (int i = 0; i<nums.length; i++)
+           sum+=nums[i];
+        sum=sum/nums.length;
+        System.out.println("Srednee= " + sum);
+    }
+
+}
+
+public class main {
+
+    public static void main(String[] args) {
+t3 p1 = new t3();
+p1.min(2,6,9,23,6,-4);
+p1.max(2,6,9,23,6,-4);
+p1.sred(2,6,9,23,6,-4);
+      }
+}
