@@ -1,0 +1,33 @@
+package com.company;
+
+public class t10 {
+    static int[] osm (int... nums) {
+        int min = nums [0];
+        int max = nums [0];
+        for (int i = 0; i<nums.length; i++)
+            if (min > nums[i])
+                min = nums[i];
+
+        for (int i = 0; i<nums.length; i++)
+            if (max < nums[i])
+                max = nums[i];
+            int m1 [] = {min, max};
+        return m1;
+    }
+
+
+}
+
+public class main {
+
+    public static void main(String[] args) {
+        t10 p1 = new t10();
+        int p2 [] = new int [2];
+p2 = t10.osm(1,5,7,123,40,-2,4);
+System.out.println ("Minimalnoe chislo= " +p2[0]);
+System.out.println ("Maximalnoe chislo= " +p2[1]);
+
+
+
+      }
+}
