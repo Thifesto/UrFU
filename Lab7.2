@@ -1,0 +1,86 @@
+package company2.com;
+
+
+public class Main {
+    public static void main(String[] args) {
+        sup sup1 = new sup("peredanniy text");
+
+    int i1 = sup1.getlength();
+    sup1.gettext();
+    System.out.println("dlina = " +i1);
+
+        sub sub1 = new sub(4,"subtext");
+        sub1.gettext();
+        sub1.getint();
+    }
+}
+
+package company2.com;
+
+public class sup {
+    private String s1;
+
+    public sup() {
+    }
+
+
+    final public int getlength () {
+        int length = s1.length();
+        return length;
+    }
+
+    sup (String s3) {
+        this.s1=s3;
+        }
+
+    public void sets1(String s2) {
+        this.s1 = s2;
+    }
+
+    public void sets1() {
+        this.s1 = "autotext";
+    }
+
+    public void gettext() {
+        System.out.println ("text sup = " +s1);
+    }
+
+
+}
+
+package company2.com;
+
+public class sub extends sup {
+    public int i2;
+
+    sub (int i3, String s4) {
+        this.i2 = i3;
+        super.sets1(s4);
+    }
+
+    public void sets1(String s4) {
+        super.sets1 (s4);
+    }
+
+    public void sets1() {
+        super.sets1 ();
+    }
+
+    public void seti2 (int i3) {
+        this.i2 = i3;
+    }
+
+    public void sets1i2 (String s4, int i3) {
+        this.i2 = i3;
+        super.sets1(s4);
+    }
+
+    public void gettext(String s4) {
+        System.out.println ("text sub = " +s4);
+    }
+
+    public void getint() {
+        System.out.println ("chislo = " + i2);
+    }
+
+}
