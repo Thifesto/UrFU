@@ -1,0 +1,27 @@
+package company.com;
+import java.util.Scanner;
+
+public class Main {
+
+    private static final Scanner sc = new Scanner(System.in);
+
+
+
+    private static String con(int x) {
+
+        if (x == 0) return "0";
+
+        int del = x / 2;
+        int mod = x % 2;
+
+        return con(del) + mod;
+    }
+
+    public static void main(String[] args) {
+        System.out.print("Введите число: ");
+        int i1 = sc.nextInt();
+
+
+        System.out.println("chislo " +i1 + "v 2 sisteme = " + con(i1));
+    }
+}
