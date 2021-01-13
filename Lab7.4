@@ -1,0 +1,100 @@
+package company4.com;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        sup s1 = new sup('e');
+        String str1 = s1.toString();
+        System.out.println(str1);
+
+        sup s2 = new sup (s1);
+        str1 = s2.toString();
+        System.out.println(str1);
+
+        sub1 subclass = new sub1('d', "tri");
+        str1 = subclass.toString();
+        System.out.println(str1);
+
+        sup subclass1 = new sub1 (subclass);
+        str1 = subclass1.toString();
+        System.out.println(str1);
+
+        sub2 subclass2 = new sub2('b', "odin", 0);
+        str1 = subclass2.toString();
+        System.out.println(str1);
+
+        sub2 subclass3 = new sub2 (subclass2);
+        str1 = subclass3.toString();
+        System.out.println(str1);
+
+
+    }
+}
+
+public class sup {
+        public char ch1;
+
+        sup (char ch2) {
+            this.ch1=ch2;
+        }
+
+        public sup() {
+        }
+
+        sup (sup copy) {
+            this(copy.ch1);
+        }
+
+        @Override
+        public String toString() {
+            return " Class name: " + this.getClass().getSimpleName() + "\n" +
+                    " char= " + this.ch1;
+        }
+    }
+    
+    public class sub1 extends sup {
+    public String s1;
+
+    sub1 (char ch2, String s2) {
+        this.ch1=ch2;
+        this.s1 = s2;
+    }
+
+    public sub1() {
+    }
+
+    sub1 (sub1 copy) {
+        this(copy.ch1, copy.s1);
+    }
+
+      @Override
+    public String toString() {
+        return " Class name: " + this.getClass().getSimpleName() + "\n" +
+                " char= " + this.ch1 + "\n" +
+                " string= " + this.s1;
+    }
+
+}
+
+public class sub2 extends sub1 {
+    public int i1;
+
+    sub2 (char ch2, String s2, int i2) {
+        this.i1 = i2;
+        this.ch1 = ch2;
+        this.s1 = s2;
+    }
+
+    sub2 (sub2 copy) {
+        this(copy.ch1, copy.s1, copy.i1);
+    }
+
+    @Override
+    public String toString() {
+        return " Class name: " + this.getClass().getSimpleName() + "\n" +
+                " char= " + this.ch1 + "\n" +
+                " string= " + this.s1 + "\n" +
+                " int= " + this.i1 ;
+    }
+}
