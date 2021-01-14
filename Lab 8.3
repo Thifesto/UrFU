@@ -1,0 +1,59 @@
+package company.com;
+import java.util.Scanner;
+
+public class massiv {
+    int mas[];
+    static Scanner sc = new Scanner(System.in);
+    massiv(int i) {
+        mas = new int [i];
+    }
+
+    void vvod(int n) {
+
+        System.out.print("Введите " + (+n + 1) + " целое число массива: ");
+        int i2 = sc.nextInt();
+        mas[n] = i2;
+        if (n == mas.length - 1) return;
+        else {
+            n++;
+            vvod(n);
+        }
+    }
+
+        void vivod(int i) {
+                if(i==0) return;
+                else vivod(i-1);
+                System.out.println("[" + (i-1) + "] "+ mas[i-1]);
+
+    }
+}
+
+package company.com;
+import java.util.Scanner;
+
+public class massiv {
+    int mas[];
+    static Scanner sc = new Scanner(System.in);
+    massiv(int i) {
+        mas = new int [i];
+    }
+
+    void vvod(int n) {
+
+        System.out.print("Введите " + (+n + 1) + " целое число массива: ");
+        int i2 = sc.nextInt();
+        mas[n] = i2;
+        if (n == mas.length - 1) return;
+        else {
+            n++;
+            vvod(n);
+        }
+    }
+
+        void vivod(int i) {
+                if(i==0) return;
+                else vivod(i-1);
+                System.out.println("[" + (i-1) + "] "+ mas[i-1]);
+
+    }
+}
