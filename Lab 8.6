@@ -1,0 +1,152 @@
+package company.com;
+
+public class Main {
+    private static int r=0;
+    private static int t=9;
+    public static void main(String[] args) {
+
+        Node head=new Node(0, null);
+        Node tail=new Node(0, null);
+        createHead(head);
+        toString(head);
+        head=new Node (0,null);
+        head =createTail(head);
+        toString(head);
+        head = AddFirst(head);
+        toString(head);
+        AddLast(head);
+        toString(head);
+        Insert(head, 2);
+        toString(head);
+        head = RemoveFirst(head);
+        toString(head);
+        RemoveLast(head);
+        toString(head);
+        Remove(head, 4);
+        toString(head);
+        head=new Node (0,null);
+        createHeadRec(head);
+        toString(head);
+        head = createTailRec(head);
+        toString(head);
+        System.out.println();
+        toStringRec(head);
+     }
+
+
+    public static void createHead(Node n1) {
+
+        for (int i = 0; i <9; i++) {
+           n1.next=new Node(i+1, null);
+           n1=n1.next; // указатель на созданный элемент запоминается
+        }
+
+    }
+
+    public static Node createHeadRec (Node n1) {
+
+        if (r>4) return n1;
+        r++;
+        n1.next=new Node (r,null);
+        n1=n1.next;
+        createHeadRec(n1);
+return n1;
+    }
+
+    public static Node createTailRec (Node n1) {
+        n1=new Node (t,n1);
+        Node n2 = n1;
+        if (t<0) {return n1;}
+        else {t--;
+        createTailRec(n1.next);
+        }
+        return n2;
+    }
+
+    public static Node createTail(Node n1) {
+        n1=null;
+        for (int i = 9; i>=0; i--) {
+            n1=new Node(i, n1);
+        }
+return n1;
+    }
+
+    public static void toString (Node n1) {
+        System.out.println();
+        Node ref = n1;
+while (ref != null) {
+        System.out.print(" " + ref.value);
+        ref = ref.next;
+    }
+}
+
+    public static String toStringRec (Node n1) {
+        if (n1==null) return "";
+        System.out.print(" " + n1.value);
+        toStringRec (n1.next);
+        return "";}
+
+public static Node AddFirst (Node n1) {
+    n1 = new Node (-5, n1);
+        return n1;
+}
+
+    public static Node AddLast (Node n1) {
+Node newtail = new Node (10, null);
+        while (n1.next != null) {
+            n1=n1.next;
+        }
+n1.next = newtail;
+        return n1;
+    }
+
+    public static Node Insert (Node n1, int x) {
+Node n2 = new Node (15, null);
+int k=1;
+while (n1.next!=null&&(k<x)) {
+    n1=n1.next;
+    k++;
+}
+n2.next = n1.next;
+n1.next=n2;
+return n1;
+    }
+
+    public static Node RemoveFirst (Node n1) {
+        n1 = n1.next;
+        return n1;
+    }
+
+    public static Node RemoveLast (Node n1) {
+        while (n1.next.next != null) {
+            n1=n1.next;
+        }
+        n1.next=null;
+        return n1;
+    }
+
+    public static Node Remove (Node n1, int x) {
+        int k=1;
+        while (n1.next!=null&&(k<x)) {
+            n1=n1.next;
+            k++;
+        }
+        n1.next = n1.next.next;
+        return n1;
+    }
+
+
+}
+
+package company.com;
+
+public class Node {
+        public int value; // значение
+        public Node next; // поле – ссылка (указатель) на следующий узел
+        Node(int value, Node next) { // конструктор класса
+            this.value = value;
+            this.next = next;
+        }
+
+}
+
