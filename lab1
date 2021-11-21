@@ -1,0 +1,234 @@
+package Collect;
+
+import javax.swing.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        HashSet<Integer> h = new HashSet<>(6000000);
+        LinkedHashMap <Integer, Integer> lkm = new LinkedHashMap(6000000);
+        List<Integer> arrayList = new ArrayList<>(6000000);
+        System.out.println("Время выполнения операции добавления в начало arrayList = " + getRunTimeALB(arrayList));
+        System.out.println("Время выполнения операции получения элемента по индексу в начале arrayList = " + getGetTimeALB(arrayList));
+        System.out.println("Время выполнения операции удаления в начале arrayList = " + getDelTimeALB(arrayList));
+        System.out.println("Время выполнения операции добавления в конец arrayList = " + getRunTimeALE(arrayList));
+        System.out.println("Время выполнения операции получения элемента по индексу в конце arrayList = " + getGetTimeALE(arrayList));
+        System.out.println("Время выполнения операции удаления в конце arrayList = " + getDelTimeALE(arrayList));
+        System.out.println("Время выполнения операции добавления с середины arrayList = " + getRunTimeALS(arrayList));
+        System.out.println("Время выполнения операции получения элемента по индексу в середине arrayList = " + getGetTimeALS(arrayList));
+        System.out.println("Время выполнения операции удаления с середины arrayList = " + getDelTimeALS(arrayList));
+        System.out.println("Время выполнения операции добавления в начало HashSet = " + getRunTimeHSB(h));
+        System.out.println("Время выполнения операции удаления в начале HashSet = " + getDelTimeHSB(h));
+        System.out.println("Время выполнения операции добавления в конец HashSet = " + getRunTimeHSE(h));
+        System.out.println("Время выполнения операции удаления в конце HashSet = " + getDelTimeHSE(h));
+        System.out.println("Время выполнения операции добавления с середины HashSet = " + getRunTimeHSS(h));
+        System.out.println("Время выполнения операции удаления с середины HashSet = " + getDelTimeHSS(h));
+        //System.out.println("Время выполнения операции поиска элемента в начале HashSet = " + getConTimeHSB(h));
+        System.out.println("Время выполнения операции добавления в начале LinkedHashMap = " + getRunTimeLKMB(lkm));
+        System.out.println("Время выполнения операции получения элемента по индексу в начале LinkedHashMap = " + getGetTimeLKMB(lkm));
+        System.out.println("Время выполнения операции удаления в начале LinkedHashMap = " + getDelTimeLKMB(lkm));
+        System.out.println("Время выполнения операции добавления в конце LinkedHashMap = " + getRunTimeLKME(lkm));
+        System.out.println("Время выполнения операции получения элемента по индексу в конце LinkedHashMap = " + getGetTimeLKME(lkm));
+        System.out.println("Время выполнения операции удаления в конце LinkedHashMap = " + getDelTimeLKME(lkm));
+        System.out.println("Время выполнения операции добавления с середины LinkedHashMap = " + getRunTimeLKMS(lkm));
+        System.out.println("Время выполнения операции получения элемента по индексу в середине LinkedHashMap = " + getGetTimeLKMS(lkm));
+        System.out.println("Время выполнения операции удаления в середине LinkedHashMap = " + getDelTimeLKMS(lkm));
+    }
+
+    private static long getRunTimeALB(List<Integer> list) {
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 6000000; i++) {
+            list.add(i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start;
+    }
+
+    private static long getRunTimeALE(List<Integer> list) {
+        long start = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            list.add(i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start;
+    }
+
+    private static long getRunTimeALS(List<Integer> list) {
+        long start = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            list.add(i);
+            list.add(i-3000000);
+        }
+        long end = System.currentTimeMillis();
+        return end - start;
+    }
+
+    private static long getDelTimeALB(List<Integer> list){
+        long st = System.currentTimeMillis();
+        for (int i = 0; i < 3000000; i++) {
+            list.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeALE(List<Integer> list){
+        long st = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            list.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeALS(List<Integer> list){
+        long st = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            list.remove(i);
+            list.remove(i-3000000);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeALB(List<Integer> list){
+        long st = System.currentTimeMillis();
+        list.get(1014);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeALE(List<Integer> list){
+        long st = System.currentTimeMillis();
+        list.get(5999955);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeALS(List<Integer> list){
+        long st = System.currentTimeMillis();
+        list.get(3000123);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getRunTimeLKMB(LinkedHashMap <Integer, Integer> lin){
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 6000000; i++) {
+            lin.put (i,i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getRunTimeLKME(LinkedHashMap <Integer, Integer> lin){
+        long start = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            lin.put (i,i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getRunTimeLKMS(LinkedHashMap <Integer, Integer> lin){
+        long start = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            lin.put (i,i);
+            lin.put (i-3000000,i-3000000);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getDelTimeLKMB(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        for (int i = 0; i < 6000000; i++) {
+            lin.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeLKMS(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            lin.remove(i);
+            lin.remove(i-3000000);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeLKME(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            lin.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeLKMB(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        lin.get(1014);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeLKME(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        lin.get(5999955);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getGetTimeLKMS(LinkedHashMap <Integer, Integer> lin){
+        long st = System.currentTimeMillis();
+        lin.get(3000123);
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getRunTimeHSS(HashSet<Integer> hash){
+        long start = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            hash.add(i);
+            hash.add(i-3000000);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getRunTimeHSB(HashSet<Integer> hash){
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 6000000; i++) {
+            hash.add(i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getRunTimeHSE(HashSet<Integer> hash){
+        long start = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            hash.add(i);
+        }
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getConTimeHSB(HashSet<Integer> hash){
+        long start = System.currentTimeMillis();
+        if (hash.contains(101)==true)
+            System.out.println("значение найдено");
+        long end = System.currentTimeMillis();
+        return end - start; }
+
+    private static long getDelTimeHSB(HashSet<Integer> hash){
+        long st = System.currentTimeMillis();
+        for (int i = 0; i < 6000000; i++) {
+            hash.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeHSS(HashSet<Integer> hash){
+        long st = System.currentTimeMillis();
+        for (int i = 3000000; i < 6000000; i++) {
+            hash.remove(i);
+            hash.remove(i-3000000);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+
+    private static long getDelTimeHSE(HashSet<Integer> hash){
+        long st = System.currentTimeMillis();
+        for (int i = 6000000; i > 0; i--) {
+            hash.remove(i);
+        }
+        long en = System.currentTimeMillis();
+        return en - st; }
+}
