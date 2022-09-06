@@ -1,0 +1,2405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+
+    <VBox prefHeight="300.0" prefWidth="500.0" spacing="20.0">
+        <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="p1" minHeight="-Infinity" minWidth="400.0" text="Программа предназначена для рассчета оценки процесса Обеспечение защиты информации при управлении доступом по ГОСТ Р 57580.1-2017" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="p12" minHeight="-Infinity" minWidth="400.0" text="Оценивается выполнение мер в финансовой организации. Если меру не требуется выполнять, то следует отметить значение н/п, если выполнение меры требуется и оно выполняется, то отменячается 1, если не выполняется - 0" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp0" minHeight="-Infinity" minWidth="400.0" text="Произведите оценку выполнения мер подпроцесса Управление учетными записями и правами субъектов логического доступа процесса Обеспечение защиты информации при управлении доступом" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp1" minHeight="-Infinity" minWidth="400.0" text="УЗП.1 Осуществление логического доступа пользователями и эксплуатационным персоналом под уникальными и персонифицированными учетными записями" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp1" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp2" minHeight="-Infinity" text="УЗП.2 Контроль соответствия фактического состава
+                    разблокированных учетных записей фактическому составу легальных субъектов логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp2" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp3" minHeight="-Infinity" text="УЗП.3 Контроль отсутствия незаблокированных учетных записей: уволенных работников; работников, отсутствующих на рабочем месте более 90 календарных дней; работников внешних (подрядных) организаций, прекративших свою деятельность в организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp3" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp4" minHeight="-Infinity" text="УЗП.4 Контроль отсутствия незаблокированных учетных записей неопределенного целевого назначения" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp4" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp5" minHeight="-Infinity" text="УЗП.5 Документарное определение правил предоставления (отзыва) и блокирования логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp5" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp6" minHeight="-Infinity" text="УЗП.4 Назначение для всех ресурсов доступа распорядителя логического доступа (владельца ресурса доступа)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp6" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp7" minHeight="-Infinity" text="УЗП.7 Предоставление прав логического доступа по решению распорядителя логического доступа (владельца ресурса доступа)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp7" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp8" minHeight="-Infinity" text="УЗП.8 Хранение эталонной информации о предоставленных правах логического доступа и обеспечение целостности указанной информации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp8" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp9" minHeight="-Infinity" text="УЗП.9 Контроль соответствия фактических прав логического доступа эталонной информации о предоставленных правах логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp9" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp10" minHeight="-Infinity" text="УЗП.10 Исключение возможного бесконтрольного самостоятельного расширения пользователями предоставленных им прав логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp10" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp11" minHeight="-Infinity" text="УЗП.11 Исключение возможного бесконтрольного изменения пользователями параметров настроек средств и систем защиты информации, параметров настроек АС, связанных с защитой информации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp11" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp12" minHeight="-Infinity" text="УЗП.12 Контроль необходимости отзыва прав субъектов логического доступа при изменении их должностных обязанностей" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp12" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp13" minHeight="-Infinity" text="УЗП.13 Контроль прекращения предоставления логического доступа и блокирование учетных записей при истечении периода (срока) предоставления логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp13" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp14" minHeight="-Infinity" text="УЗП.14 Установление фактов неиспользования субъектами логического доступа предоставленных им прав на осуществление логического доступа на протяжении периода времени, превышающего 90 дней" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp14" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp15" minHeight="-Infinity" text="УЗП.15 Установление фактов неиспользования субъектами логического доступа предоставленных им прав на осуществление логического доступа на протяжении периода времени, превышающего 45 дней" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp15" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp16" minHeight="-Infinity" text="УЗП.16 Реализация контроля со стороны распорядителя логического доступа целесообразности дальнейшего предоставления прав логического доступа, не использованных субъектами на протяжении периода времени, указанного в мерах УЗП.14, УЗП.15" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp16" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp17" minHeight="-Infinity" text="УЗП.17 Реализация возможности определения состава предоставленных прав логического доступа для конкретного ресурса доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp17" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp18" minHeight="-Infinity" text="УЗП.18 Реализация возможности определения состава предоставленных прав логического доступа для конкретного субъекта логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp18" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp19" minHeight="-Infinity" text="УЗП.19 Определение состава ролей, связанных с выполнением операции (транзакции) в АС, имеющих финансовые последствия для финансовой организации, клиентов и контрагентов, и ролей, связанных с контролем выполнения указанных операций (транзакций), запрет выполнения указанных ролей одним субъектом логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp19" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp20" minHeight="-Infinity" text="УЗП.20 Реализация правил управления правами логического доступа, обеспечивающих запрет совмещения одним субъектом логического доступа ролей, предусмотренных мерой УЗП.19" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp20" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp21" minHeight="-Infinity" text="УЗП.21 Реализация правил управления правами логического доступа, обеспечивающих запрет совмещения одним субъектом логического доступа следующих функций: - эксплуатация и (или) контроль эксплуатации ресурса доступа, в том числе АС, одновременно с использованием по назначению ресурса доступа в рамках реализации бизнес-процесса финансовой организации; - создание и (или) модернизация ресурса доступа, в том числе АС, одновременно с использованием по назначению ресурса доступа в рамках реализации бизнес-процесса финансовой организации; - эксплуатация средств и систем защиты информации одновременно с контролем эксплуатации средств и систем защиты информации; - управление учетными записями субъектов логического доступа одновременно с управлением правами субъектов логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp21" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp22" minHeight="-Infinity" text="УЗП.22 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала, обладающего привилегированными правами логического доступа, позволяющими осуществить деструктивное воздействие, приводящие к нарушению выполнения бизнес-процессов или технологических процессов финансовой организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp22" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp22">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp22">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp23" minHeight="-Infinity" text="УЗП.23 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала и пользователей, обладающих правами логического доступа, в том числе в АС, позволяющими осуществить операции (транзакции), приводящие к финансовым последствиям для финансовой организации, клиентов и контрагентов" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp23" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp23">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp23">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp24" minHeight="-Infinity" text="УЗП.24 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала, обладающего правами по управлению логическим доступом" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp24" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp24">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp24">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp25" minHeight="-Infinity" text="УЗП.25 Регистрация событий защиты информации, связанных с действиями по управлению учетными записями и правами субъектов логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp25" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp25">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp25">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp26" minHeight="-Infinity" text="УЗП.26 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала, обладающего правами по управлению техническими мерами, реализующими многофакторную аутентификацию" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp26" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp26">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp26">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp27" minHeight="-Infinity" text="УЗП.27 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала, обладающего правами по изменению параметров настроек средств и систем защиты информации, параметров настроек АС, связанных с защитой информации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp27" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp27">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp27">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp28" minHeight="-Infinity" text="УЗП.28 Регистрация событий защиты информации, связанных с действиями, и контроль действий эксплуатационного персонала, обладающего правами по управлению криптографическими ключами" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp28" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp28">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp28">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="uzp29" minHeight="-Infinity" text="УЗП.29 Закрепление АРМ пользователей и эксплуатационного персонала за конкретными субъектами логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupuzp29" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupuzp29">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupuzp29">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd0" minHeight="-Infinity" minWidth="400.0" text="Произведите оценку выполнения мер подпроцесса Идентификация, аутентификация, авторизация (разграничение доступа) при осуществлении логического доступа процесса Обеспечение защиты информации при управлении доступом" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd1" minHeight="-Infinity" text="РД.1 Идентификация и однофакторная аутентификация пользователей" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd1" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd2" minHeight="-Infinity" text="РД.2 Идентификация и многофакторная аутентификация пользователей" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd2" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd3" minHeight="-Infinity" text="РД.3 Идентификация и однофакторная аутентификация эксплуатационного персонала" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd3" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd4" minHeight="-Infinity" text="РД.4 Идентификация и многофакторная аутентификация эксплуатационного персонала" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd4" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd5" minHeight="-Infinity" text="РД.5 Аутентификация программных сервисов, осуществляющих логический доступ с использованием технических учетных записей" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd5" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd6" minHeight="-Infinity" text="РД.6 Аутентификация АРМ эксплуатационного персонала, используемых для осуществления логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd6" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd7" minHeight="-Infinity" text="РД.7 Аутентификация АРМ пользователей, используемых для осуществления логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd7" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd8" minHeight="-Infinity" text="РД.8 Сокрытие (неотображение) паролей при их вводе субъектами доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd8" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd9" minHeight="-Infinity" text="РД.9 Запрет использования учетных записей субъектов логического доступа с незаданными аутентификационными данными или заданными по умолчанию разработчиком ресурса доступа, в том числе разработчиком АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd9" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd10" minHeight="-Infinity" text="РД.10 Запрет на использование групповых, общих и стандартных учетных записей и паролей, а также прочих подобных методов идентификации и аутентификации, не позволяющих определить конкретного субъекта доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd10" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd11" minHeight="-Infinity" text="РД.11 Временная блокировка учетной записи пользователей после выполнения ряда неуспешных последовательных попыток аутентификации на период времени не менее 30 мин" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd11" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd12" minHeight="-Infinity" text="РД.12 Запрет множественной аутентификации субъектов логического доступа с использованием одной учетной записи путем открытия параллельных сессий логического доступа с использованием разных АРМ, в том числе виртуальных" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd12" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd13" minHeight="-Infinity" text="РД.13 Обеспечение возможности выполнения субъектом логического доступа - работниками финансовой организации процедуры принудительного прерывания сессии логического доступа и (или) приостановки осуществления логического доступа (с прекращением отображения на мониторе АРМ информации, доступ к которой получен в рамках сессии осуществления логического доступа)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd13" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd14" minHeight="-Infinity" text="РД.14 Автоматическое прерывание сессии логического доступа (приостановка осуществления логического доступа) по истечении установленного времени бездействия (неактивности) субъекта логического доступа, не превышающего 15 мин, с прекращением отображения на мониторе АРМ информации, доступ к которой получен в рамках сессии осуществления логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd14" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd15" minHeight="-Infinity" text="РД.15 Выполнение процедуры повторной аутентификации для продолжения осуществления логического доступа после его принудительного или автоматического прерывания (приостановки осуществления логического доступа), предусмотренного мерами РД.13 и РД.14" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd15" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd16" minHeight="-Infinity" text="РД.16 Использование на АРМ субъектов логического доступа встроенных механизмов контроля изменения базовой конфигурации оборудования (пароль на изменение параметров конфигурации системы, хранящихся в энергонезависимой памяти)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd16" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd17" minHeight="-Infinity" text="РД.17 Запрет на использование технологии аутентификации с сохранением аутентификационных данных в открытом виде в СВТ" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd17" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd18" minHeight="-Infinity" text="РД.18 Запрет на передачу аутентификационных данных в открытом виде по каналам и линиям связи и их передачу куда-либо, кроме средств или систем аутентификации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd18" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd19" minHeight="-Infinity" text="РД.19 Смена паролей пользователей не реже одного раза в год" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd19" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd20" minHeight="-Infinity" text="РД.20 Смена паролей эксплуатационного персонала не реже одного раза в квартал" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd20" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd21" minHeight="-Infinity" text="РД.21 Использование пользователями паролей длиной не менее восьми символов" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd21" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd22" minHeight="-Infinity" text="РД.22 Использование эксплуатационным персоналом паролей длиной не менее шестнадцати символов" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd22" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd22">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd22">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd23" minHeight="-Infinity" text="РД.23 Использование при формировании паролей субъектов логического доступа символов, включающих буквы (в верхнем и нижнем регистрах) и цифры" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd23" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd23">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd23">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd24" minHeight="-Infinity" text="РД.24 Запрет использования в качестве паролей субъектов логического доступа легко вычисляемых сочетаний букв и цифр (например, имена, фамилии, наименования, общепринятые сокращения)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd24" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd24">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd24">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd25" minHeight="-Infinity" text="РД.25 Обеспечение возможности самостоятельной смены субъектами логического доступа своих паролей" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd25" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd25">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd25">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd26" minHeight="-Infinity" text="РД.26 Хранение копий аутентификационных данных эксплуатационного персонала на выделенных МНИ или на бумажных носителях" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd26" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd26">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd26">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd27" minHeight="-Infinity" text="РД.27 Реализация защиты копий аутентификационных данных эксплуатационного персонала от НСД при их хранении на МНИ или бумажных носителях" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd27" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd27">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd27">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd28" minHeight="-Infinity" text="РД.28 Регистрация персонификации, выдачи (передачи) и уничтожения персональных технических устройств аутентификации, реализующих многофакторную аутентификацию" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd28" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd28">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd28">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd29" minHeight="-Infinity" text="РД.29 Смена аутентификационных данных в случае их компрометации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd29" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd29">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd29">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd30" minHeight="-Infinity" text="РД.30 Авторизация логического доступа к ресурсам доступа, в том числе АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd30" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd30">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd30">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd31" minHeight="-Infinity" text="РД.31 Реализация необходимых методов (дискреционный, мандатный, ролевой или иной метод) при разграничении логического доступа к ресурсам доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd31" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd31">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd31">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd32" minHeight="-Infinity" text="РД.32 Реализация ролевого метода (с определением для каждой роли прав доступа) при разграничении логического доступа в АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd32" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd32">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd32">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd33" minHeight="-Infinity" text="РД.33 Реализация необходимых типов (чтение, запись, выполнение или иной тип) и правил разграничения логического доступа к ресурсам доступа, в том числе АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd33" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd33">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd33">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd34" minHeight="-Infinity" text="РД.34 Запрет реализации пользователями бизнес-процессов и технологических процессов финансовой организации с использованием учетных записей эксплуатационного персонала, в том числе в АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd34" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd34">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd34">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd35" minHeight="-Infinity" text="РД.35 Запрет выполнения пользователями бизнес-процессов с использованием привилегированных прав логического доступа, в том числе работы пользователей с правами локального администратора АРМ" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd35" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd35">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd35">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd36" minHeight="-Infinity" text="РД.36 Оповещение субъекта логического доступа после успешной авторизации о дате и времени его предыдущей авторизации в АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd36" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd36">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd36">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd37" minHeight="-Infinity" text="РД.37 Контроль состава разрешенных действий в АС до выполнения идентификации и аутентификации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd37" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd37">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd37">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd38" minHeight="-Infinity" text="РД.38 Размещение устройств вывода (отображения) информации, исключающее ее несанкционированный просмотр" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd38" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd38">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd38">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd39" minHeight="-Infinity" text="РД.39 Регистрация выполнения субъектами логического доступа ряда неуспешных последовательных попыток аутентификации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd39" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd39">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd39">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd40" minHeight="-Infinity" text="РД.40 Регистрация осуществления субъектами логического доступа идентификации и аутентификации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd40" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd40">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd40">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd41" minHeight="-Infinity" text="РД.41 Регистрация авторизации, завершения и (или) прерывания (приостановки) осуществления эксплуатационным персоналом и пользователями логического доступа, в том числе в АС" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd41" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd41">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd41">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd42" minHeight="-Infinity" text="РД.42 Регистрация запуска программных сервисов, осуществляющих логический доступ" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd42" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd42">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd42">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd43" minHeight="-Infinity" text="РД.43 Регистрация изменений аутентификационных данных, используемых для осуществления логического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd43" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd43">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd43">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="rd44" minHeight="-Infinity" text="РД.44 Регистрация действий пользователей и эксплуатационного персонала, предусмотренных в случае компрометации их аутентификационных данных" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="grouprd44" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$grouprd44">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$grouprd44">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd0" minHeight="-Infinity" minWidth="400.0" text="Произведите оценку выполнения мер подпроцесса Защита информации при осуществлении физического доступа процесса Обеспечение защиты информации при управлении доступом" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd1" minHeight="-Infinity" text="ФД.1 Документарное определение правил предоставления физического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd1" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd2" minHeight="-Infinity" text="ФД.2 Контроль перечня лиц, которым предоставлено право самостоятельного физического доступа в помещения" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd2" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd3" minHeight="-Infinity" text="ФД.3 Контроль самостоятельного физического доступа в помещения для лиц, не являющихся работниками финансовой организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd3" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd4" minHeight="-Infinity" text="ФД.4 Контроль самостоятельного физического доступа в помещения для технического (вспомогательного) персонала" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd4" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd5" minHeight="-Infinity" text="ФД.5 Осуществление физического доступа лицами, которым не предоставлено право самостоятельного доступа в помещения, только под контролем работников финансовой организации, которым предоставлено такое право" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd5" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd6" minHeight="-Infinity" text="ФД.6 Назначение для всех помещений распорядителя физического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd6" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd7" minHeight="-Infinity" text="ФД.7 Предоставление права самостоятельного физического доступа в помещения по решению распорядителя физического доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd7" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd8" minHeight="-Infinity" text="ФД.8 Оборудование входных дверей помещения механическими замками, обеспечивающими надежное закрытие помещений в нерабочее время" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd8" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd9" minHeight="-Infinity" text="ФД.9 Оборудование помещений средствами (системами) контроля и управления доступом" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd9" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd9">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd10" minHeight="-Infinity" text="ФД.10 Оборудование помещений средствами видеонаблюдения" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd10" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd10">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd11" minHeight="-Infinity" text="ФД.11 Оборудование помещений средствами охранной и пожарной сигнализации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd11" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd11">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd12" minHeight="-Infinity" text="ФД.12 Расположение серверного и сетевого оборудования в запираемых серверных стоечных шкафах" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd12" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd12">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd13" minHeight="-Infinity" text="ФД.13 Контроль доступа к серверному и сетевому оборудованию, расположенному в запираемых серверных стоечных шкафах" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd13" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd13">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd14" minHeight="-Infinity" text="ФД.14 Хранение архивов информации средств (систем) контроля и управления доступом не менее трех лет" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd14" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd14">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd15" minHeight="-Infinity" text="ФД.15 Хранение архивов информации средств видеонаблюдения не менее 14 дней" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd15" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd15">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd16" minHeight="-Infinity" text="ФД.16 Хранение архивов информации средств видеонаблюдения не менее 90 дней" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd16" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd16">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd17" minHeight="-Infinity" text="ФД.17 Регистрация доступа к общедоступным объектам доступа с использованием средств видеонаблюдения" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd17" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd17">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd18" minHeight="-Infinity" text="ФД.18 Хранение архивов информации средств видеонаблюдения, регистрирующих доступ к общедоступным объектам доступа, не менее 14 дней" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd18" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd18">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd19" minHeight="-Infinity" text="ФД.19 Контроль состояния общедоступных объектов доступа с целью выявлений несанкционированных изменений в их аппаратном обеспечении и (или) ПО" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd19" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd19">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd20" minHeight="-Infinity" text="ФД.20 Приведение общедоступных объектов доступа, для которых были выявлены несанкционированные изменения в их аппаратном обеспечении и (или) ПО (до устранения указанных несанкционированных изменений), в состояние, при котором невозможно их использование для осуществления операции (транзакции), приводящей к финансовым последствиям для финансовой организации, клиентов и контрагентов" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd20" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd20">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="fd21" minHeight="-Infinity" text="ФД.21 Регистрация событий защиты информации, связанных с входом (выходом) в помещения (из помещений), в которых расположены объекты доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupfd21" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupfd21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupfd21">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy0" minHeight="-Infinity" minWidth="400.0" text="Произведите оценку выполнения мер подпроцесса Идентификация, классификация и учет ресурсов и объектов доступа процесса Обеспечение защиты информации при управлении доступом" wrapText="true" />
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy1" minHeight="-Infinity" text="ИУ.1 Учет созданных, используемых и (или) эксплуатируемых ресурсов доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy1" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy1">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy2" minHeight="-Infinity" text="ИУ.2 Учет используемых и (или) эксплуатируемых объектов доступа" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy2" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy2">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy3" minHeight="-Infinity" text="ИУ.3 Учет эксплуатируемых общедоступных объектов доступа (в том числе банкоматов, платежных терминалов)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy3" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy3">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy4" minHeight="-Infinity" text="ИУ.4 Контроль фактического состава созданных, используемых и (или) эксплуатируемых ресурсов доступа (баз данных, сетевых файловых ресурсов, виртуальных машин) и их корректного размещения в сегментах вычислительных сетей финансовой организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy4" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy4">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy5" minHeight="-Infinity" text="ИУ.5 Контроль выполнения операций по созданию, удалению и резервному копированию ресурсов доступа (баз данных, сетевых файловых ресурсов, виртуальных машин)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy5" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy5">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy6" minHeight="-Infinity" text="ИУ.6 Контроль фактического состава эксплуатируемых объектов доступа и их корректного размещения в сегментах вычислительных сетей финансовой организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy6" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy6">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy7" minHeight="-Infinity" text="ИУ.7 Регистрация событий защиты информации, связанных с созданием, копированием, в том числе резервным, и (или) удалением ресурсов доступа (баз данных, сетевых файловых ресурсов, виртуальных машин)" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy7" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy7">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="83.0" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Label fx:id="iy8" minHeight="-Infinity" text="ИУ.8 Регистрация событий защиты информации, связанных с подключением (регистрацией) объектов доступа в вычислительных сетях финансовой организации" wrapText="true" />
+                    <RadioButton mnemonicParsing="false" selected="true" text="0">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                        <toggleGroup>
+                            <ToggleGroup fx:id="groupiy8" />
+                        </toggleGroup>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="1" toggleGroup="$groupiy8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                    <RadioButton mnemonicParsing="false" text="н/п" toggleGroup="$groupiy8">
+                        <padding>
+                            <Insets right="6.0" />
+                        </padding>
+                    </RadioButton>
+                </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                <children>
+                    <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" onAction="#onHelloButtonClick" text="Рассчитать">
+                        <HBox.margin>
+                            <Insets right="20.0" />
+                        </HBox.margin>
+                    </Button>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+   <padding>
+      <Insets left="6.0" right="6.0" top="6.0" />
+   </padding>
+
+</ScrollPane>
